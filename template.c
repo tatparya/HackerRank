@@ -3,6 +3,8 @@
 #include <math.h>
 #include <stdlib.h>
 
+//	Author: Tatparya Shankar
+
 int main() 
 {
 	
