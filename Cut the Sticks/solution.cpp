@@ -26,7 +26,6 @@ void cutTheSticks( int * array, int numElements )
 	int smallest;
 	int count = 0;
 	qsort( array, numElements, sizeof( int ), comapre );
-	printArray( numElements, array );
 
 	for( int i = numElements - 1; i >= 0; i-- )
 	{
@@ -37,9 +36,8 @@ void cutTheSticks( int * array, int numElements )
 			count++;
 			i--;
 		}
-		cout << count << endl;
+		cout << numElements << endl;
 		numElements -= count;
-		printArray( numElements, array );
 	}
 }
 
