@@ -20,7 +20,7 @@ void getResult()
 //  Srt
 {
     //  Get String
-    char string[101];
+    char string[100001];
     int length;
     int del = 0;
     scanf( "%s", string );
@@ -31,7 +31,6 @@ void getResult()
     {
         if( string[i] == string[i+1] )
         {
-            deleteNext( string, i + 1, length );
             del++;
         }
     }
