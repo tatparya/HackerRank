@@ -10,7 +10,7 @@ def calcMax( topics ):
 
 def getResult( n, m ):
 	teamList = []
-	
+
 	#	Get all teams
 	for i in range( n ):
 		team = int( input(), 2 )
@@ -21,14 +21,14 @@ def getResult( n, m ):
 	numTeams = 0
 	for i in range( n ):
 		for j in range( i + 1, n ):
-			res = int( bin( teamList[ i ] | teamList[ j ] )[2:] )
+			res = calcMax( bin( teamList[ i ] | teamList[ j ] )[2:] )
 			if res > maxTopic:
 				numTeams = 1
 				maxTopic = res
 			elif res == maxTopic:
 				numTeams += 1
 
-	print( calcMax( str( maxTopic ) ) )
+	print( maxTopic )
 	print( numTeams )
 	
 def main():
