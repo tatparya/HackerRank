@@ -1,4 +1,4 @@
-<h3>Problem</h3>
+<h3>Minimum Draws</h3>
 ---
 Problem Link:<br/>
-~link here~
+https://www.hackerrank.com/challenges/minimum-draws/
