@@ -1,0 +1,2 @@
+//	Make file executeable
+chmod +x filename
