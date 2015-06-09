@@ -13,18 +13,19 @@ void getResult()
 	int numFiles;
 	int N;
 	long Mi;
+	scanf( "%d", &N );
 
 	//	Get array and calc result
 	long int totalUsage = 0;
 	long int usage;
 	long int temp;
-	scanf( "%d", &usage );
+	scanf( "%ld", &usage );
 	totalUsage += usage;
 
 	for( int i = 1; i < N; i++ )
 	{
 		//	Get new usage and compare with last
-		scanf( "%d", &temp );
+		scanf( "%ld", &temp );
 		if( temp > usage )
 		{
 			totalUsage += temp - usage;
@@ -32,13 +33,13 @@ void getResult()
 		usage = temp;
 	}
 
-	printf( "%d\n", totalUsage );
+	printf( "%ld\n", totalUsage );
 }
 
-int main() 
+int main()
 {
 	int numTestCases;
-	scan = scanf( "%d", &numTestCases );
+	scanf( "%d", &numTestCases );
 	while( numTestCases > 0 )
 	{
 		numTestCases--;
