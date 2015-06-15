@@ -66,31 +66,7 @@ int main()
 	for( int i = 0; i < n; i++ )
 	{
 		if( isalpha( string[i] ) )
-		{
-			//	Incremend by 2
-			if( string[i] < 91 )
-			{
-				if( string[i] + k > 90 )
-				{
-					string[i] += k % 91 + 65;
-				}
-				else if( string[i] + k < 65 )
-				{
-					string[i] = 90 - 64 % ( string[i] + k );
-				}
-			}
-			else
-			{
-				if( string[i] + k > 122 )
-				{
-					string[i] += k % 123 + 97;
-				}
-				else if( string[i] + k < 97 )
-				{
-					string[i] = 122 - 96 % ( string[i] + k );
-				}
-			}
-		}
+			string[i] = crypt( string[i], k % 26 );
 	}
 
 	cout << string;
