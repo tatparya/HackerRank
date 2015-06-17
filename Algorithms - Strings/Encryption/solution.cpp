@@ -23,18 +23,21 @@ int main() {
     int i;
     for( i = 0; i < cols; i++ )
     {
-    	cout << i << endl << cols << endl;
+    	//cout << i << endl << cols << endl;
     	for( int j = 0; j < rows; j++ )
     	{
- 			cout << i << " " << j << " " << i + j * cols << endl;
-    		cout << str[ i + j * cols ] << endl;
+ 			//cout << i << " " << j << " " << i + j * cols << endl;
+    		if( i + j * cols < length )
+            {
+                cout << str[ i + j * cols ];
+            }
     	}
-    	cout << " " << endl;
+    	cout << " ";
     }
 
     cout << endl;
 
-    cout << "HERE!!" << endl;
+    //cout << "HERE!!" << endl;
 
-    cout << endl << i << " " << cols << endl;
+    //cout << endl << i << " " << cols << endl;
 }
