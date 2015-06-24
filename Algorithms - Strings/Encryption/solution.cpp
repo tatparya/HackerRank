@@ -10,6 +10,8 @@ int main() {
     //  Get input
     string str;
     cin >> str;
+
+    //	Calculate num Rows and Columns
     int length = str.length();
     int rows = floor( sqrt( length ) );
     int cols = ceil( sqrt( length ) );
@@ -19,14 +21,13 @@ int main() {
     	rows = cols;
     }
 
-    cout << rows << " " << cols << endl;
-    int i;
-    for( i = 0; i < cols; i++ )
+    //	Go over each column
+    for( int i = 0; i < cols; i++ )
     {
-    	//cout << i << endl << cols << endl;
+    	//	Go over each row
     	for( int j = 0; j < rows; j++ )
     	{
- 			//cout << i << " " << j << " " << i + j * cols << endl;
+ 			//	Check for boundary conditions
     		if( i + j * cols < length )
             {
                 cout << str[ i + j * cols ];
@@ -36,8 +37,4 @@ int main() {
     }
 
     cout << endl;
-
-    //cout << "HERE!!" << endl;
-
-    //cout << endl << i << " " << cols << endl;
 }
