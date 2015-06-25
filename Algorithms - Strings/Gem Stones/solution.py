@@ -3,19 +3,38 @@ import sys
 import string
 
 def main():
-    str1 = input()
-    str2 = input()
+    #   get input
+    n = int( input() )
 
-    numDel = len( str1 ) + len( str2 )
+    rockList = []
 
-    for letter in str1:
-    	if letter in str2:
-    		cnt1 = str1.count( letter )
-    		cnt2 = str2.count( letter )
-    		if cnt1 < cnt2:
-    			numDel -= cnt1 * 2;
+    for i in range( n ):
+        rock = input()
+        rockList.append( rock );
 
-    print( numDel )
+    gemList = []
+
+    for element in rockList[0]:
+        if element not in gemList:
+            gemList.append( element )
+
+    #   Check occurance of each letter in other strings
+    itr = 0
+    while itr < len(gemList):
+        i = 1
+        found = 1
+        while i < n and found:
+            if gemList[itr] not in rockList[i]:
+                found = 0
+                gemList[itr] = 0
+            i += 1
+        itr += 1
+
+    #   remove all 0's
+    while 0 in gemList:
+        gemList.remove( 0 )
+
+    print( len( gemList ) )
 
 if __name__ == "__main__":
     main()
