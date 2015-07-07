@@ -26,7 +26,7 @@ void getResult()
     int i;
     int j = length - 1;
     int less;
-    cout << "Case : "<< string<< endl;
+    //cout << "Case : "<< string<< endl;
     //  Start at right end of string
     //  Find a char less than current char
     while( j >= 0 && !found )
@@ -58,8 +58,25 @@ void getResult()
     }
     //  Swap
     exchangeChar( string, less, j + 1 );
-    cout << "After exchange : " << string << endl;
+    //cout << "After exchange : " << string << endl;
     //cout << "Sort after : " << string[less] << endl;
+
+    //  Sort after less
+    int begin = less + 1;
+    i = begin;
+    while( i < length - 1 )
+    {
+        j = i + 1;
+        while( j >= begin + 1 && string[j] < string[j-1] )
+        {
+            exchangeChar( string, j, j-1 );
+            //cout << "Exchange " << string[j] << " and " << string[j - 1] << endl;
+            j--;
+        }
+        i++;
+    }
+    //cout << "Afer sort : " << string << endl << endl;
+    cout << string << endl;
 }
 
 int main() {
