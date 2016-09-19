@@ -1,4 +1,3 @@
-<h3>Problem</h3>
+<h3>Quick Sort</h3>
 ---
-Problem Link:<br/>
-~link here~
+Recursive Quick Sort Implementation
